@@ -13,6 +13,7 @@ describe("template spec", () => {
     
     it.only("test1 - Searchpatient using patient ID",()=>{
         //register new patient
+        //remember to update this information in the search patient script
         cy.get('.fa-plus').click();
         cy.get('#givenName').type("Penny")
         cy.get('#middleName').type("Cuocco")

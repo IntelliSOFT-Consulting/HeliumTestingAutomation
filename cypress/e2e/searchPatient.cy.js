@@ -15,6 +15,7 @@ describe("template spec", () => {
    
        
         //Search patient
+        //Update the variables from the registerPatient script
         it.only("test1 - Searchpatient using patient ID",()=>{
 
                cy.get('#registrationNumber').type("MRN294039362")
