@@ -17,3 +17,22 @@ Cypress.Commands.add('login',()=>{
 
   return false
 })
+
+
+
+Cypress.Commands.add("conditionalClick", (selector, altSelector) => {
+  cy.get(selector, { timeout: 4000 }).then(($element) => {
+    if ($element.length > 0) {
+      // The main selector is found, so click on it
+      cy.wrap($element).click();
+    } else {
+      // The main selector is not found, click on the alternative selector
+      cy.contains(altSelector).click();
+    }
+  });
+});
+
+
+
+
+

@@ -18,7 +18,7 @@ describe("template spec", () => {
         //Update the variables from the registerPatient script
         it.only("test1 - Searchpatient using patient ID",()=>{
 
-               cy.get('#registrationNumber').type("MRN294039362")
+               cy.get('#registrationNumber').type("MRN294039364")
                cy.get('.search-patient-id > .reg-srch-btn > button').click()
                //cy.get('tbody > :nth-child(1) > :nth-child(1) > a').contains("MRN294039361")
                const valueToSearch = "MRN294039362";
@@ -46,8 +46,8 @@ describe("template spec", () => {
                })
 
         it.only("Test2: Search patient using patient name",()=>{
-          const nameToSearch = "Brian Brian K";
-               cy.get('#name').type("Brian Brian K")
+          const nameToSearch = "David Cuocco";
+               cy.get('#name').type(nameToSearch)
                cy.get(':nth-child(4) > .reg-srch-btn > button').click().wait(1000)
                            
                // Wait for the search results to appear
