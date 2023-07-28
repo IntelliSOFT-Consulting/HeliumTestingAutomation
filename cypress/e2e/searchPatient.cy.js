@@ -5,6 +5,7 @@ describe("template spec", () => {
      // cy.visit("https://heliumhealthdemo.intellisoftkenya.com/bahmni/home/index.html#/login");
       cy.baseurl()
       cy.login()
+      cy.get('.fa-user').click()
       
     
     })

@@ -3,6 +3,7 @@ describe("template spec", () => {
     beforeEach(() => {
       cy.baseurl()
       cy.login()
+      cy.get('.fa-user').click()
     
     });
   
@@ -15,7 +16,7 @@ describe("template spec", () => {
         //register new patient
         //remember to update this information in the search patient script
         cy.get('.fa-plus').click();
-        cy.get('#givenName').type("David")
+        cy.get('#givenName').type("Disy")
         cy.get('#middleName').type("Cuocco")
         cy.get('#familyName').type("K")
         cy.get('#gender').select("Female")
