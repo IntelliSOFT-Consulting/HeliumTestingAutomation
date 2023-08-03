@@ -35,13 +35,6 @@ describe("template spec", () => {
             cy.get('.form-group > .comment-toggle').click()
             cy.get('.obs-comment-section').type("Patient requires an exray scan of the lower stomach")
             cy.get('.confirm').click()
-
-         
-
-
-
-  
-
         })
       })
 

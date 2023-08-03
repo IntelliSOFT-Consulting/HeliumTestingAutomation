@@ -16,10 +16,10 @@ describe("template spec", () => {
         //register new patient
         //remember to update this information in the search patient script
         cy.get('.fa-plus').click();
-        cy.get('#givenName').type("Disy")
-        cy.get('#middleName').type("Cuocco")
-        cy.get('#familyName').type("K")
-        cy.get('#gender').select("Female")
+        cy.get('#givenName').type("Howard")
+        cy.get('#middleName').type("H")
+        cy.get('#familyName').type("Howard")
+        cy.get('#gender').select("Male")
         cy.get('#ageYears').type(24)
         cy.get('#cityVillage').type("Sigire")
         cy.get('.ui-autocomplete').find('li').first().click()

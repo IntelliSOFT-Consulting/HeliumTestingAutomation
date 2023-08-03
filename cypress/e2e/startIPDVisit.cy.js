@@ -19,7 +19,7 @@ describe("template spec", () => {
        
         it.only("Test1: Search patient using patient name and start OPD visit",()=>{
           
-          const nameToSearch = "Disy Cuocco";
+          const nameToSearch = "Howard H Howard";
                cy.get('#name').type(nameToSearch)
                cy.get(':nth-child(4) > .reg-srch-btn > button').click().wait(1000)
                            

@@ -12,6 +12,19 @@ Cypress.Commands.add('login',()=>{
       cy.wait(1000);
       
  })
+
+ Cypress.Commands.add("typeWithClear", { prevSubject: true }, (subject, text) => {
+  // Clear the field using cy.clear() if it already has data
+  cy.wrap(subject).then((element) => {
+    if (element.val() !== "") {
+      cy.wrap(element).clear();
+    }
+  });
+
+  // Type the specified text into the field
+  cy.wrap(subject).type(text);
+});
+
  
  Cypress.on('uncaught:exception', (err, runnable) => {
 
@@ -20,17 +33,7 @@ Cypress.Commands.add('login',()=>{
 
 
 
-Cypress.Commands.add("conditionalClick", (selector, altSelector) => {
-  cy.get(selector, { timeout: 4000 }).then(($element) => {
-    if ($element.length > 0) {
-      // The main selector is found, so click on it
-      cy.wrap($element).click();
-    } else {
-      // The main selector is not found, click on the alternative selector
-      cy.contains(altSelector).click();
-    }
-  });
-});
+
 
 
 
