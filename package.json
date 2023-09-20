@@ -1,0 +1,15 @@
+{
+  "name": "heliumtestingautomation-1",
+  "version": "1.0.0",
+  "description": "This repo contains tests written in Cypress. The tests are heavily commented to ease you into the Cypress API. Help + Testing The steps below will take you all the way through Cypress. It is assumed you have nothing installed except for node + git.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.2.0"
+  }
+}

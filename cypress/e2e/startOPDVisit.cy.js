@@ -16,7 +16,8 @@ describe("template spec", () => {
        
        
         it.only("Test1: Search patient using patient name and start OPD visit",()=>{
-          const nameToSearch = "David Cuocco";
+          const nameToSearch = "Raj R A";
+          cy.get('.fa-user').click()
                cy.get('#name').type(nameToSearch)
                cy.get(':nth-child(4) > .reg-srch-btn > button').click().wait(1000)
                            
@@ -29,8 +30,8 @@ describe("template spec", () => {
                cy.wrap(row).find('td:nth-child(2)').should('contain', nameToSearch);
 
                cy.get('tr > :nth-child(1) > a').click()
-                //cy.contains('button', 'MOPD').click();  apply this code if it is a new patient and comment on line 33
-               cy.get('button.confirm').contains('Enter Visit Details').click();
+               cy.contains('button', 'MOPD').click();  //apply this code if it is a new patient and comment on line 
+               //cy.get('button.confirm').contains('Enter Visit Details').click();
                
                cy.contains('button', 'Self Sponsored').click();
                cy.get('#observation_4').clear();

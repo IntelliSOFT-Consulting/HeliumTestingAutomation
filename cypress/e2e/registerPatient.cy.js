@@ -16,9 +16,9 @@ describe("template spec", () => {
         //register new patient
         //remember to update this information in the search patient script
         cy.get('.fa-plus').click();
-        cy.get('#givenName').type("Howard")
-        cy.get('#middleName').type("H")
-        cy.get('#familyName').type("Howard")
+        cy.get('#givenName').type("Raj")
+        cy.get('#middleName').type("R")
+        cy.get('#familyName').type("A")
         cy.get('#gender').select("Male")
         cy.get('#ageYears').type(24)
         cy.get('#cityVillage').type("Sigire")

@@ -23,7 +23,7 @@ describe("template spec", () => {
 
             // Search for patient in the IPD
             cy.get(':nth-child(4) > a').click()
-            const searchTerm = "MRN294039367";
+            const searchTerm = "MRN294039379";
             cy.get('#patientIdentifier').type(searchTerm);
             cy.wait(2000);
             cy.contains('.patient-id', searchTerm).click();

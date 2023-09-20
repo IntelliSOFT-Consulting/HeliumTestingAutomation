@@ -19,7 +19,7 @@ describe("template spec", () => {
             cy.get('.fa-stethoscope').click()
 
             // Search for patient in the MOPD
-            const searchTerm = "MRN294039364";
+            const searchTerm = "MRN294039375";
             cy.get('#patientIdentifier').type(searchTerm);
             cy.wait(2000);
             cy.contains('.patient-id', searchTerm).click();
