@@ -44,12 +44,5 @@ describe("template spec", () => {
               cy.get('.confirm').click()
 
         })
-      })
-
-      
-    })
-        
-        
-  
-        
-   
+      })      
+    })      
